@@ -1,0 +1,28 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    margin: 40px;
+}
+
+.jumboEl{
+    background-image: url();
+}
+
+.flexContainer{
+    display: flex;
+}
+
+.currentWeather{
+    border: solid 2px black;
+    margin-left: 50px;
+}
+
+.containerSearch{
+    border: solid 2px black;
+    width: 200px;
+}
+
