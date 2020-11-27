@@ -21,6 +21,11 @@ body{
     margin-left: 50px;
 }
 
+.forcastWeather{
+    border: solid 2px black;
+    margin-left: 50px;
+}
+
 .containerSearch{
     border: solid 2px black;
     width: 200px;

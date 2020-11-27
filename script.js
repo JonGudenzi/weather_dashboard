@@ -11,6 +11,9 @@ $(".submit").on("click", function(){
 
     let queryURL = `https://api.openweathermap.org/data/2.5/weather?units=imperial&q=${city}&appid=${APIkey}`;
     
+    // let queryURLSecond = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${APIkey}`;
+
+    let queryURLSecond = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=${part}&appid=${APIkey}`;
     
     $.ajax({
     url: queryURL,
@@ -18,13 +21,23 @@ $(".submit").on("click", function(){
     })
     .then(function(response){
     createWeatherBlock(response);
-    console.log(response);
     });
+
+    $.ajax({
+        url: queryURLSecond,
+        method: "GET"
+        })
+        .then(function(response){
+        
+        console.log(response);
+        });
+
+
 
 })
 
 function createWeatherBlock(data){
-    $(".ul_city").append("<li>" + inputEl.val() );
+    $(".ul_city").append("<li>" + inputEl.val() ).addClass("");
     let weatherEl = $("<div>")
     let cityName = $("<h1>" + inputEl.val() + " " + "</h1>").add("id", "nowEl");
     let tempEl = $("<p>Temp: " + data.main.temp + "</p>");
