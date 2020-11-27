@@ -1,4 +1,10 @@
 let APIkey = "0883634af428fc459c0aeaef586593e5";
+let inputEl = $('input[name="cityInput"]');
+
+
+let today = moment();
+$(".currentWeather").text(today.format("MMMM Do, YYYY"));
+
 
 $(".submit").on("click", function(){
     let city = $(".inputValue").val();
@@ -18,11 +24,13 @@ $(".submit").on("click", function(){
 })
 
 function createWeatherBlock(data){
+    $(".ul_city").append("<li>" + inputEl.val() );
     let weatherEl = $("<div>")
+    let cityName = $("<h1>" + inputEl.val() + " " + "</h1>").add("id", "nowEl");
     let tempEl = $("<p>Temp: " + data.main.temp + "</p>");
     let humidityEl = $("<p>Humidity: " + data.main.humidity + "</p>");
     let windEl = $("<p>Wind Speed: " + data.wind.speed + "</p>");
-    weatherEl.append(tempEl, humidityEl, windEl);
+    weatherEl.append(cityName, tempEl, humidityEl, windEl);
     $(".currentWeather").append(weatherEl);
 }
 
