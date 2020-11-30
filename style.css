@@ -55,3 +55,7 @@ body{
 .weatherFlex{
     display: flex;
 }
+
+.ul_city{
+    list-style-type: none;
+}

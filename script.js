@@ -39,8 +39,7 @@ $(".submit").on("click", function () {
 function createWeatherBlock(data){
     let today = moment();
     $(".currentWeather").text(today.format("MMMM Do, YYYY"));
-
-    $(".ul_city").append("<a>" + inputEl.val() ).attr("href");
+    $(".ul_city").append("<li>" + inputEl.val() );
     let weatherEl = $("<div>")
     let cityName = $("<h1>" + inputEl.val() + "</h1>") ;
     let tempEl = $("<p>Temp: " + data.main.temp + "</p>");
@@ -52,6 +51,12 @@ function createWeatherBlock(data){
 }
 
 function forecastBlock(forcast){
+    // current
+let UVi = $("<p>UV Index: " + forcast.current.uvi + "</p>")
+$(".currentWeather").append(UVi);
+
+
+//day One
 let tomorrow = moment().add(1, "days")
 $(".day_One").text(tomorrow.format("MMMM Do, YYYY"));
 let dayOne = $("<div>");
