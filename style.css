@@ -14,20 +14,44 @@ body{
 
 .flexContainer{
     display: flex;
+    border: solid 2px black;
 }
 
 .currentWeather{
+    padding: 15px;
     border: solid 2px black;
     margin-left: 50px;
 }
 
-.forcastWeather{
+.day_One{
     border: solid 2px black;
     margin-left: 50px;
 }
 
+.day_Two{
+    border: solid 2px black;
+    margin-left: 10px;
+}
+
+.day_Three{
+    border: solid 2px black;
+    margin-left: 10px;
+}
+
+.day_Four{
+    border: solid 2px black;
+    margin-left: 10px;
+}
+
+.day_Five{
+    border: solid 2px black;
+    margin-left: 10px;
+}
 .containerSearch{
     border: solid 2px black;
     width: 200px;
 }
 
+.weatherFlex{
+    display: flex;
+}
