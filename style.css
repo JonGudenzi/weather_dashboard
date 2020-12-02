@@ -54,25 +54,40 @@ body{
 .day_One{
     border: solid 2px black;
     margin-left: 50px;
+    background-color: rgb(50, 212, 210);
+    border-radius: 15px;
+    padding: 5px;
 }
 
 .day_Two{
     border: solid 2px black;
     margin-left: 10px;
+    background-color: rgb(50, 212, 210);
+    border-radius: 15px;
+    padding: 5px;
 }
 
 .day_Three{
     border: solid 2px black;
     margin-left: 10px;
+    background-color: rgb(50, 212, 210);
+    border-radius: 15px;
+    padding: 5px;
 }
 
 .day_Four{
     border: solid 2px black;
     margin-left: 10px;
+    background-color: rgb(50, 212, 210);
+    border-radius: 15px;
+    padding: 5px;
 }
 
 .day_Five{
     border: solid 2px black;
     margin-left: 10px;
+    background-color: rgb(50, 212, 210);
+    border-radius: 15px;
+    padding: 5px;
 }
 

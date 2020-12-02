@@ -55,7 +55,6 @@ function forecastBlock(forcast){
 let UVi = $("<p>UV Index: " + forcast.current.uvi + "</p>")
 $(".currentWeather").append(UVi);
 
-
 //day One
 let tomorrow = moment().add(1, "days")
 $(".day_One").text(tomorrow.format("MMMM Do, YYYY"));
@@ -65,6 +64,7 @@ let iconEl = $("<img src='http://openweathermap.org/img/wn/" + forcast.daily[0].
 let humidityForcastEl = $("<p>Humidity: " + JSON.stringify(forcast.daily[0].humidity) + "%" + "</p>");
 dayOne.append(tempForcastEl, iconEl, humidityForcastEl);
 $(".day_One").append(dayOne);
+
 
 // day two
 let second_Day = moment().add(2, "days")
