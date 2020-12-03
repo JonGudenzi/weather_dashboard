@@ -4,9 +4,8 @@ let inputEl = $('input[name="cityInput"]');
 $(".submit").on("click", function () {
     let city = $(".inputValue").val();
 
-    // debugger;
     let queryURL = `https://api.openweathermap.org/data/2.5/weather?units=imperial&q=${city}&appid=${APIkey}`;
-
+//calling first API to retreive lon/lat data to use in the second API
     $.ajax({
         url: queryURL,
         method: "GET",
@@ -29,13 +28,12 @@ $(".submit").on("click", function () {
                     console.log(obj);
                 });
         })
-        
+//saving searches to local storage
     var textHistory = JSON.parse(localStorage.getItem("text")) || [];
     textHistory.push(city);
     localStorage.setItem("text", JSON.stringify(textHistory));
-
 })
-
+//current weather container
 function createWeatherBlock(data){
     let today = moment();
     $(".currentWeather").text(today.format("MMMM Do, YYYY"));
@@ -54,7 +52,7 @@ function forecastBlock(forcast){
     // current
 let UVi = $("<p>UV Index: " + forcast.current.uvi + "</p>")
 $(".currentWeather").append(UVi);
-
+//start of 5 day forcast
 //day One
 let tomorrow = moment().add(1, "days")
 $(".day_One").text(tomorrow.format("MMMM Do, YYYY"));
@@ -64,7 +62,6 @@ let iconEl = $("<img src='http://openweathermap.org/img/wn/" + forcast.daily[0].
 let humidityForcastEl = $("<p>Humidity: " + JSON.stringify(forcast.daily[0].humidity) + "%" + "</p>");
 dayOne.append(tempForcastEl, iconEl, humidityForcastEl);
 $(".day_One").append(dayOne);
-
 
 // day two
 let second_Day = moment().add(2, "days")
