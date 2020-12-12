@@ -17,23 +17,23 @@
             <h1 class="display-4">Weather Dashboard</h1>
         </div>
     </div>
-<!-- this container holds the search and current weather elements -->
+    <!-- this container holds the search and current weather elements -->
     <div class="flexContainer">
-        <div class="containerSearch ">
+        <div class="containerSearch col-sm-8">
             <h1 class="search">Search</h1>
-            <input id="cityInput" type="text" class="inputValue" name="cityInput">
+            <input id="cityInput" type="text" class="inputValue col-sm-6" name="cityInput">
             <button class="submit">submit</button>
             <div class="cityBtnContainer"></div>
         </div>
-        <div class="currentWeather "></div>
+        <div id="currentWeather"></div>
     </div>
-<!--this container holds the 5 day forcast elements-->
-    <div class="flexEl">
-        <div class="day_One"></div>
-        <div class="day_Two"></div>
-        <div class="day_Three"></div>
-        <div class="day_Four"></div>
-        <div class="day_Five"></div>
+    <!--this container holds the 5 day forcast elements-->
+    <div class="flexEl col-sm-6">
+        <div id="day_One"></div>
+        <div id="day_Two"></div>
+        <div id="day_Three"></div>
+        <div id="day_Four"></div>
+        <div id="day_Five"></div>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

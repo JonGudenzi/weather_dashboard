@@ -9,7 +9,7 @@ body{
     margin: 40px;
     background-image: url("images/water.jpg");
     background-repeat: no-repeat;
-  background-size: 100%;
+    background-size: 100%;
 }
 
 .jumboEl{
@@ -26,7 +26,6 @@ body{
     margin-left: 11%;
     flex-wrap: wrap;
     justify-content: center;
-
 }
 
 .containerSearch{
@@ -43,21 +42,30 @@ body{
     width: 150px;
 }
 
-.ul_city{
-    list-style-type: none;
+.cityBtn{
+    padding: 10px;
+    background-color: black;
+    color: rgb(49, 168, 156);
+    font-weight: bold;
+    border-radius: 50%;
+    border: solid black 2px;
 }
 
-.currentWeather{
+.cityBtn:hover{
+    border-color:turquoise;
+    border-width: 4px;
+}
+
+#currentWeather{
+    display: none;
     border: solid 2px black;
     margin-left: 100px;
     width: 300px;
-    display: inline-block;
+    /* display: inline-block; */
     background-image: linear-gradient(rgb(138, 224, 188), rgb(113, 87, 207));
     border-radius: 15px;
     padding: 10px;
 }
-
-
 
 .flexEl{
     display: flex;
@@ -66,7 +74,8 @@ body{
     margin-left: 15%;
 }
 
-.day_One{
+#day_One{
+    display: none;
     border: solid 2px black;
     margin-left: 50px;
     background-image: linear-gradient(rgb(138, 224, 188), rgb(113, 87, 207));
@@ -74,7 +83,8 @@ body{
     padding: 5px;
 }
 
-.day_Two{
+#day_Two{
+    display: none;
     border: solid 2px black;
     margin-left: 10px;
     background-image: linear-gradient(rgb(138, 224, 188), rgb(113, 87, 207));
@@ -82,7 +92,8 @@ body{
     padding: 5px;
 }
 
-.day_Three{
+#day_Three{
+    display: none;
     border: solid 2px black;
     margin-left: 10px;
     background-image: linear-gradient(rgb(138, 224, 188), rgb(113, 87, 207));
@@ -90,7 +101,8 @@ body{
     padding: 5px;
 }
 
-.day_Four{
+#day_Four{
+    display: none;
     border: solid 2px black;
     margin-left: 10px;
     background-image: linear-gradient(rgb(138, 224, 188), rgb(113, 87, 207));
@@ -98,7 +110,8 @@ body{
     padding: 5px;
 }
 
-.day_Five{
+#day_Five{
+    display: none;
     border: solid 2px black;
     margin-left: 10px;
     background-image: linear-gradient(rgb(138, 224, 188), rgb(113, 87, 207));
@@ -106,3 +119,14 @@ body{
     padding: 5px;
 }
 
+@media screen and (max-width: 270px){
+    .search {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 270px){
+    .container h1 {
+        font-size: 32px;
+    }
+}
