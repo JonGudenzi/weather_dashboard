@@ -6,11 +6,13 @@
 }
 
 body{
-    margin: 40px;
     background-image: url("images/water.jpg");
-    background-repeat: no-repeat;
+    /* background-repeat: no-repeat; */
     background-size: 100%;
+
 }
+
+
 
 .jumboEl{
     background-image: url();
@@ -61,7 +63,6 @@ body{
     border: solid 2px black;
     margin-left: 100px;
     width: 300px;
-    /* display: inline-block; */
     background-image: linear-gradient(rgb(138, 224, 188), rgb(113, 87, 207));
     border-radius: 15px;
     padding: 10px;
