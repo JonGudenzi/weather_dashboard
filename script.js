@@ -4,11 +4,16 @@ let inputEl = $('input[name="cityInput"]');
 $(".submit").on("click", function () {
     let city = $(".inputValue").val();
     $(".inputValue").val("");
+    if (city == false){
+        return;
+    }
+    else{
     //saving searches to local storage
     var textHistory = JSON.parse(localStorage.getItem("text")) || [];
     textHistory.push(city);
     localStorage.setItem("text", JSON.stringify(textHistory));
     dataRender(city);
+    }
 })
 
 function dataRender(city) {
