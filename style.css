@@ -6,16 +6,10 @@
 }
 
 body{
-    background-image: url("images/water.jpg");
-    /* background-repeat: no-repeat; */
-    background-size: 100%;
-
-}
-
-
-
-.jumboEl{
-    background-image: url();
+margin: 0;
+background-image: url("./images/water.jpg");
+background-size: cover;
+background-repeat: no-repeat;
 }
 
 .headerEl{
@@ -38,6 +32,7 @@ body{
     background-image: linear-gradient(rgb(138, 224, 188), rgb(113, 87, 207));
     border-radius: 15px;
     padding: 10px;
+    margin-bottom: 15px;
 }
 
 .inputValue{
@@ -68,6 +63,12 @@ body{
     padding: 10px;
 }
 
+#forcastContainer{
+    margin: 15px;
+    margin-left: 200px;
+    justify-content: center;
+}
+
 .flexEl{
     display: flex;
     border: 2pm solid black;
@@ -75,44 +76,7 @@ body{
     margin-left: 15%;
 }
 
-#day_One{
-    display: none;
-    border: solid 2px black;
-    margin-left: 50px;
-    background-image: linear-gradient(rgb(138, 224, 188), rgb(113, 87, 207));
-    border-radius: 15px;
-    padding: 5px;
-}
-
-#day_Two{
-    display: none;
-    border: solid 2px black;
-    margin-left: 10px;
-    background-image: linear-gradient(rgb(138, 224, 188), rgb(113, 87, 207));
-    border-radius: 15px;
-    padding: 5px;
-}
-
-#day_Three{
-    display: none;
-    border: solid 2px black;
-    margin-left: 10px;
-    background-image: linear-gradient(rgb(138, 224, 188), rgb(113, 87, 207));
-    border-radius: 15px;
-    padding: 5px;
-}
-
-#day_Four{
-    display: none;
-    border: solid 2px black;
-    margin-left: 10px;
-    background-image: linear-gradient(rgb(138, 224, 188), rgb(113, 87, 207));
-    border-radius: 15px;
-    padding: 5px;
-}
-
-#day_Five{
-    display: none;
+.days{
     border: solid 2px black;
     margin-left: 10px;
     background-image: linear-gradient(rgb(138, 224, 188), rgb(113, 87, 207));
@@ -129,5 +93,11 @@ body{
 @media screen and (max-width: 270px){
     .container h1 {
         font-size: 32px;
+    }
+}
+
+@media screen and (max-width: 630px){
+    #forcastContainer {
+        margin-left: 10px;
     }
 }
