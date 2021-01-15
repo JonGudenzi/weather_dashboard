@@ -43,6 +43,7 @@ function dataRender(city) {
         })
 
     renderSaveSearchBtns();
+    
 }
 
 $("body").on("click", ".cityBtn", function () {
@@ -75,6 +76,7 @@ function createWeatherBlock(data, city) {
     let windEl = $("<p>Wind Speed: " + data.wind.speed + "</p>");
     weatherEl.append(cityName, tempEl, humidityEl, windEl);
     $("#currentWeather").append(weatherEl);
+    $("#forcastContainer").empty();
 }
 
 function forecastBlock(forcast) {
@@ -103,7 +105,7 @@ function forecastBlock(forcast) {
         let humidityForcastEl = $("<p>Humidity: " + JSON.stringify(forcast.daily[i].humidity) + "%" + "</p>");
         day.append(tempForcastEl, iconEl, humidityForcastEl);
         $("#forcastContainer").append(day);
+       
     }
 }
-
 
