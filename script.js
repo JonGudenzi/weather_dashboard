@@ -14,7 +14,7 @@ $(".submit").on("click", function () {
     localStorage.setItem("text", JSON.stringify(textHistory));
     dataRender(city);
     }
-})
+});
 
 function dataRender(city) {
     let queryURL = `https://api.openweathermap.org/data/2.5/weather?units=imperial&q=${city}&appid=${APIkey}`;
@@ -41,15 +41,14 @@ function dataRender(city) {
                     console.log(obj);
                 });
         })
-
     renderSaveSearchBtns();
-    
 }
 
 $("body").on("click", ".cityBtn", function () {
     var save = $(this).text();
     dataRender(save);
 });
+
 
 function renderSaveSearchBtns() {
     $(".cityBtnContainer").empty();
@@ -105,7 +104,7 @@ function forecastBlock(forcast) {
         let humidityForcastEl = $("<p>Humidity: " + JSON.stringify(forcast.daily[i].humidity) + "%" + "</p>");
         day.append(tempForcastEl, iconEl, humidityForcastEl);
         $("#forcastContainer").append(day);
-       
+        
     }
 }
 
